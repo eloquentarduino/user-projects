@@ -339,7 +339,7 @@ void readFile(fs::FS &fs, const char * path){
     Serial.printf("Reading file: %s\r\n", path);
 
     /** @fix use global variable **/
-    imageFile = SPIFFS.open("/capture.jpg", "wb");
+    imageFile = SPIFFS.open("/capture.jpg", "rb");
 
 
     if(!imageFile || imageFile.isDirectory()){
